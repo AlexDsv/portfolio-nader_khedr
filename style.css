@@ -41,15 +41,25 @@ ul {
   height: 80vh;
 }
 .left {
-  width: 50%;
+  width: 55%;
   padding-left: 7vw;
 }
 
+.arrow_div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.arrow_img {
+  width: 13vw;
+}
 .right {
   background-image: url("assets/pic.png");
   background-position: center;
   background-size: cover;
   width: 50%;
+  height: 95vh;
+  margin-top: -10rem;
 }
 
 h2 {
@@ -60,7 +70,7 @@ h2 {
 }
 
 h3 {
-  font-size: calc(2rem + 4vw);
+  font-size: calc(2rem + 3.5vw);
   margin: 0;
   font-weight: normal;
 }
@@ -83,4 +93,43 @@ h3 {
 .github-icon {
   width: 4.5vh;
   height: auto;
+}
+
+a li {
+  margin: 1rem;
+  padding: 1rem;
+}
+a li:hover,
+a li:active {
+  border-width: 1px 2px 1px 3px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  margin: 1rem;
+  padding: 1rem;
+  border: solid rgb(43, 43, 43);
+}
+
+.see_more {
+  position: absolute;
+  bottom: 15px;
+  left: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.see_more p {
+  font-size: calc(1rem + 1vw);
+  margin: 0;
+}
+
+.see_more img {
+  height: 7vh;
+}
+
+.top_arrow {
+  height: 22vh;
+  transform: rotate(30deg);
+  margin-bottom: -8rem;
+  margin-top: -2rem;
 }
