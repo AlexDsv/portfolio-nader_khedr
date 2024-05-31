@@ -16,6 +16,8 @@ header {
   width: 100%;
   align-items: center;
   height: 20vh;
+  position: fixed;
+  top: 0;
 }
 
 a {
@@ -37,8 +39,7 @@ ul {
 
 .home {
   display: flex;
-  width: 100%;
-  height: 80vh;
+  flex-direction: column;
 }
 .left {
   width: 55%;
@@ -62,6 +63,12 @@ ul {
   margin-top: -10rem;
 }
 
+.home_first_block {
+  display: flex;
+  width: 100%;
+  height: 65vh;
+  margin-top: 20vh;
+}
 h2 {
   font-size: calc(2rem + 6vw);
   padding: 0;
@@ -99,19 +106,8 @@ a li {
   margin: 1rem;
   padding: 1rem;
 }
-a li:hover,
-a li:active {
-  border-width: 1px 2px 1px 3px;
-  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
-  margin: 1rem;
-  padding: 1rem;
-  border: solid rgb(43, 43, 43);
-}
 
 .see_more {
-  position: absolute;
-  bottom: 15px;
-  left: 50vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,7 +131,7 @@ a li:active {
 }
 
 .about {
-  height: 100vh;
+  height: 93vh;
   font-size: calc(1.5rem + 3vh);
   padding-left: 10vw;
   padding-right: 10vw;
@@ -143,6 +139,13 @@ a li:active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 5vh;
+  padding-top: 7vh;
+}
+
+.about p {
+  font-family: "Roboto";
+  font-size: calc(1.5rem + 0.6vh);
 }
 
 .contact {
@@ -157,13 +160,15 @@ a li:active {
 }
 
 .projects {
-  height: 100vh;
+  height: 93vh;
   font-size: calc(1.5rem + 3vh);
   padding-left: 9vw;
+  padding-top: 7vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 8vh;
 }
 
 ul,
@@ -178,190 +183,6 @@ a {
   -webkit-transition: all 0.4s ease-in-out;
 }
 
-h3 {
-  margin: 0 0 10px;
-  font-size: 28px;
-  line-height: 36px;
-}
-button {
-  outline: none !important;
-}
-/******* Common Element CSS End *********/
-
-/******* Middle section CSS Start ******/
-/* -------- Landing page ------- */
-.game-section {
-  padding: 60px 50px;
-}
-.game-section .owl-stage {
-  margin: 15px 0;
-  display: flex;
-  display: -webkit-flex;
-}
-.game-section .item {
-  margin: 0 15px 60px;
-  width: 320px;
-  height: 400px;
-  display: flex;
-  display: -webkit-flex;
-  align-items: flex-end;
-  -webkit-align-items: flex-end;
-  background: #ff0000 no-repeat center center / cover;
-  border-radius: 16px;
-  overflow: hidden;
-  position: relative;
-  transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  cursor: pointer;
-}
-.game-section .item.active {
-  width: 500px;
-  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
-}
-.game-section .item:after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-}
-.game-section .item-desc {
-  padding: 0 24px 12px;
-  color: #fff;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  transform: translateY(calc(100% - 54px));
-  -webkit-transform: translateY(calc(100% - 54px));
-  transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-}
-.game-section .item.active .item-desc {
-  transform: none;
-  -webkit-transform: none;
-}
-.game-section .item-desc p {
-  opacity: 0;
-  -webkit-transform: translateY(32px);
-  transform: translateY(32px);
-  transition: all 0.4s ease-in-out 0.2s;
-  -webkit-transition: all 0.4s ease-in-out 0.2s;
-}
-.game-section .item.active .item-desc p {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-.game-section .owl-theme.custom-carousel .owl-dots {
-  margin-top: -20px;
-  position: relative;
-  z-index: 5;
-}
-/******** Middle section CSS End *******/
-
-/***** responsive css Start ******/
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  h2 {
-    margin-bottom: 32px;
-  }
-  h3 {
-    margin: 0 0 8px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-
-  /* -------- Landing page ------- */
-  .game-section {
-    padding: 50px 30px;
-  }
-  .game-section .item {
-    margin: 0 12px 60px;
-    width: 260px;
-    height: 360px;
-  }
-  .game-section .item.active {
-    width: 400px;
-  }
-  .game-section .item-desc {
-    transform: translateY(calc(100% - 46px));
-    -webkit-transform: translateY(calc(100% - 46px));
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  h2 {
-    margin-bottom: 32px;
-  }
-  h3 {
-    margin: 0 0 8px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-  .line-title {
-    width: 330px;
-  }
-
-  /* -------- Landing page ------- */
-  .game-section {
-    padding: 50px 30px 40px;
-  }
-  .game-section .item {
-    margin: 0 12px 60px;
-    width: 240px;
-    height: 330px;
-  }
-  .game-section .item.active {
-    width: 360px;
-  }
-  .game-section .item-desc {
-    transform: translateY(calc(100% - 42px));
-    -webkit-transform: translateY(calc(100% - 42px));
-  }
-}
-
-@media (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
-  h2 {
-    margin-bottom: 20px;
-  }
-  h3 {
-    margin: 0 0 8px;
-    font-size: 19px;
-    line-height: 24px;
-  }
-  .line-title {
-    width: 250px;
-  }
-
-  /* -------- Landing page ------- */
-  .game-section {
-    padding: 30px 15px 20px;
-  }
-  .game-section .item {
-    margin: 0 10px 40px;
-    width: 200px;
-    height: 280px;
-  }
-  .game-section .item.active {
-    width: 270px;
-    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
-    -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
-  }
-  .game-section .item-desc {
-    padding: 0 14px 5px;
-    transform: translateY(calc(100% - 42px));
-    -webkit-transform: translateY(calc(100% - 42px));
-  }
-}
-
-/* Styles for the carousel items */
 .owl-carousel .item {
   position: relative;
   background-size: cover;
@@ -375,13 +196,25 @@ button {
   border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
   padding: 1rem;
   border: solid rgb(43, 43, 43);
+  color: white;
+  font-family: "Roboto";
 }
 
+.owl-carousel .item:after {
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, black 135%);
+}
 .owl-carousel .item .content {
-  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 10px;
   border-radius: 5px;
+  z-index: 5;
 }
 
 .owl-carousel .item h3 {
