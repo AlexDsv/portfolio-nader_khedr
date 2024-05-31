@@ -6,6 +6,14 @@
     <title>Nader KHEDR</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="assets/LogoWhite.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
   </head>
   <body>
     <header>
@@ -49,14 +57,114 @@
           </div>
         </a>
       </section>
-      <section class="projects"></section>
-      <section class="about"></section>
+      <section class="projects">
+        <h3>Projets</h3>
+        <!-- Slider Start -->
+        <div class="owl-carousel owl-theme">
+          <div
+            class="item"
+            style="background-image: url(./assets/thumbnail1.png)"
+          >
+            <div class="content">
+              <h3>Projet 1</h3>
+              <p>Description du projet 1</p>
+            </div>
+          </div>
+          <div
+            class="item"
+            style="background-image: url(./assets/thumbnail2.png)"
+          >
+            <div class="content">
+              <h3>Projet 2</h3>
+              <p>Description du projet 2</p>
+            </div>
+          </div>
+          <div
+            class="item"
+            style="background-image: url(./assets/thumbnail3.png)"
+          >
+            <div class="content">
+              <h3>Projet 3</h3>
+              <p>Description du projet 3</p>
+            </div>
+          </div>
+          <div
+            class="item"
+            style="background-image: url(./assets/thumbnail4.png)"
+          >
+            <div class="content">
+              <h3>Projet 4</h3>
+              <p>Description du projet 4</p>
+            </div>
+          </div>
+          <div
+            class="item"
+            style="background-image: url(./assets/thumbnail5.png)"
+          >
+            <div class="content">
+              <h3>Projet 5</h3>
+              <p>Description du projet 5</p>
+            </div>
+          </div>
+          <div
+            class="item"
+            style="background-image: url(./assets/thumbnail6.png)"
+          >
+            <div class="content">
+              <h3>Projet 6</h3>
+              <p>Description du projet 6</p>
+            </div>
+          </div>
+          <div
+            class="item"
+            style="background-image: url(./assets/thumbnail7.png)"
+          >
+            <div class="content">
+              <h3>Projet 7</h3>
+              <p>Description du projet 7</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider End -->
+      </section>
+      <section class="about">
+        <h3>A propos</h3>
+        <p>
+          Young, Dynamic, passioned by video games from an early age I
+          developped video games for a long time, from Ruby with RPG Maker to C,
+          used Unreal BP to end up on Unity using C# I experimented on numerous
+          genres and tool over time to sharpen my experience and skills
+        </p>
+      </section>
       <section class="contact">
-        <p>Vous pouve zme contacter à l'adresse suivant</p>
+        <h3>Contact</h3>
+        <p>Vous pouvez me contacter à l'adresse suivant</p>
         <p>eu.khedr.nader@gmail.com</p>
       </section>
     </main>
     <footer></footer>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            1000: {
+              items: 3,
+            },
+          },
+        });
+      });
+    </script>
   </body>
 </html>
