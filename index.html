@@ -14,6 +14,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -33,8 +39,12 @@
         <div class="home_first_block">
           <div class="side-bar">
             <img class="drawing-line" src="assets/draw-line.png" /><a
+              href="https://www.nyan.cat/"
+              target="_blank"
               ><img class="github-icon" src="assets/github.png" /></a
-            ><a><img class="linkedin-icon" src="assets/linkedin.png" /></a>
+            ><a href="https://www.nyan.cat/" target="_blank"
+              ><img class="linkedin-icon" src="assets/linkedin.png"
+            /></a>
           </div>
           <div class="left">
             <div>
@@ -64,7 +74,7 @@
       <section class="projects" id="projects">
         <h3>Projets</h3>
         <div class="owl-carousel owl-theme">
-          <a href="https://www.nyan.cat/">
+          <a href="https://www.nyan.cat/" target="_blank">
             <div
               class="item"
               style="background-image: url(./assets/thumbnail1.png)"
@@ -74,7 +84,7 @@
               </div>
             </div></a
           >
-          <a href="https://www.nyan.cat/">
+          <a href="https://www.nyan.cat/" target="_blank">
             <div
               class="item"
               style="background-image: url(./assets/thumbnail2.png)"
@@ -84,7 +94,7 @@
               </div>
             </div></a
           >
-          <a href="https://www.nyan.cat/"
+          <a href="https://www.nyan.cat/" target="_blank"
             ><div
               class="item"
               style="background-image: url(./assets/thumbnail3.png)"
@@ -94,7 +104,7 @@
               </div>
             </div></a
           >
-          <a href="https://www.nyan.cat/"
+          <a href="https://www.nyan.cat/" target="_blank"
             ><div
               class="item"
               style="background-image: url(./assets/thumbnail4.png)"
@@ -104,7 +114,7 @@
               </div>
             </div></a
           >
-          <a href="https://www.nyan.cat/"
+          <a href="https://www.nyan.cat/" target="_blank"
             ><div
               class="item"
               style="background-image: url(./assets/thumbnail5.png)"
@@ -114,7 +124,7 @@
               </div>
             </div></a
           >
-          <a href="https://www.nyan.cat/"
+          <a href="https://www.nyan.cat/" target="_blank"
             ><div
               class="item"
               style="background-image: url(./assets/thumbnail6.png)"
@@ -124,7 +134,7 @@
               </div>
             </div></a
           >
-          <a href="https://www.nyan.cat/"
+          <a href="https://www.nyan.cat/" target="_blank"
             ><div
               class="item"
               style="background-image: url(./assets/thumbnail7.png)"
@@ -143,21 +153,23 @@
         </a>
       </section>
       <section class="about" id="about">
-        <h3>A propos</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae,
-          numquam, alias harum minus iusto doloremque molestias nam ducimus
-          aliquam voluptates dolore! Quaerat officia cupiditate nemo quisquam
-          alias et reprehenderit incidunt fugit, quae, ullam nostrum mollitia
-          animi quo eos nesciunt deleniti commodi? Est quas obcaecati quisquam
-          magni quia. Explicabo libero id dignissimos qui nisi? Qui itaque et
-          nostrum perspiciatis! Cum laudantium, vel alias voluptatum quidem
-          ratione facilis exercitationem temporibus aut praesentium autem
-          doloremque officia similique saepe quos ipsum dolor necessitatibus
-          natus rerum sapiente dolores molestias numquam quo. Ipsa consectetur
-          excepturi dignissimos blanditiis nam perferendis sunt? Adipisci
-          dolores earum rerum cum deleniti!
-        </p>
+        <div class="about-texts">
+          <h3>A propos</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae,
+            numquam, alias harum minus iusto doloremque molestias nam ducimus
+            aliquam voluptates dolore! Quaerat officia cupiditate nemo quisquam
+            alias et reprehenderit incidunt fugit, quae, ullam nostrum mollitia
+            animi quo eos nesciunt deleniti commodi? Est quas obcaecati quisquam
+            magni quia. Explicabo libero id dignissimos qui nisi? Qui itaque et
+            nostrum perspiciatis! Cum laudantium, vel alias voluptatum quidem
+            ratione facilis exercitationem temporibus aut praesentium autem
+            doloremque officia similique saepe quos ipsum dolor necessitatibus
+            natus rerum sapiente dolores molestias numquam quo. Ipsa consectetur
+            excepturi dignissimos blanditiis nam perferendis sunt? Adipisci
+            dolores earum rerum cum deleniti!
+          </p>
+        </div>
         <a href="#contact">
           <div class="see_more">
             <p>Contact me</p>
@@ -166,11 +178,23 @@
         </a>
       </section>
       <section class="contact" id="contact">
-        <h3>Contact</h3>
-        <p>Vous pouvez me contacter à l'adresse suivant</p>
-        <a href="mailto:eu.khedr.nader@gmail.com"
-          ><p>eu.khedr.nader@gmail.com</p></a
-        >
+        <div>
+          <h3>Contact</h3>
+        </div>
+        <div class="contact-texts">
+          <p>Vous pouvez me contacter à l'adresse suivant</p>
+          <a href="mailto:eu.khedr.nader@gmail.com"
+            ><p>eu.khedr.nader@gmail.com</p></a
+          >
+        </div>
+        <div>
+          <a href="#home">
+            <div class="see_more">
+              <p style="font-family: PWRoughs">Back to top</p>
+              <img src="assets/arrow3.png" style="transform: rotate(180deg)" />
+            </div>
+          </a>
+        </div>
       </section>
     </main>
     <footer></footer>

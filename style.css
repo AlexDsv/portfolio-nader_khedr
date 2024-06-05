@@ -19,7 +19,7 @@ header {
   flex-direction: row;
   width: 100%;
   align-items: center;
-  height: 20vh;
+  height: 18vh;
   position: fixed;
   top: 0;
 }
@@ -28,6 +28,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.header a:hover {
+}
+
 .logo {
   width: auto;
   height: calc(1.5rem + 15vh);
@@ -38,7 +42,7 @@ ul {
   list-style-type: none;
   display: flex;
   gap: 5vw;
-  font-size: calc(1.5rem + 0.8vw);
+  font-size: calc(1.5rem + 0.6vw);
 }
 
 .home {
@@ -135,20 +139,18 @@ a li {
 }
 
 .about {
-  height: 93vh;
+  height: 95vh;
   font-size: calc(1.5rem + 3vh);
   padding-left: 10vw;
   padding-right: 10vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 5vh;
-  padding-top: 7vh;
+  justify-content: space-between;
 }
 
 .about p {
-  font-family: "Roboto";
+  font-family: "Outfit";
   font-size: calc(1.5rem + 0.6vh);
 }
 
@@ -160,24 +162,34 @@ a li {
   padding-left: 9vw;
 }
 
+.about-texts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 15vh;
+}
+
 .contact {
-  height: 100vh;
+  height: 80vh;
   font-size: calc(1.5rem + 3vh);
   padding-left: 10vw;
   padding-right: 10vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding-top: 15vh;
+  padding-bottom: 5vh;
 }
 
 .contact p {
-  font-family: "Roboto";
+  font-family: "Outfit";
   font-size: calc(1.5rem + 1vh);
 }
 
 .projects {
-  height: 93vh;
+  height: 95vh;
   font-size: calc(1.5rem + 3vh);
   padding-left: 9vw;
   padding-top: 7vh;
@@ -185,7 +197,7 @@ a li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8vh;
+  gap: 5vh;
 }
 
 .projects .owl-carousel .item:hover {
@@ -216,15 +228,15 @@ a {
   position: relative;
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 40vh;
+  width: 95%;
+  height: 33vh;
   display: flex;
   align-items: flex-end;
   box-sizing: border-box;
   padding: 1rem;
-  margin: 2.1vw;
+  margin: 2vw;
   color: white;
-  font-family: "Roboto";
+  font-family: "Outfit";
   border: 3px solid #555555;
   border-radius: 3% 5% 5% 8% / 2% 6% 5% 4%;
   transition: 200ms all;
@@ -274,4 +286,20 @@ a {
 .owl-carousel .item p {
   margin: 5px 0 0;
   font-size: 16px;
+}
+
+.contact-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .see_more {
+  padding-left: 9vw;
+}
+
+.about h3,
+.contact h3 {
+  padding-left: 4.5vw;
 }
