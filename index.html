@@ -22,18 +22,30 @@
     />
   </head>
   <body>
-    <header>
-      <a href="#home">
-        <img class="logo" src="assets/Logo.png" />
-      </a>
-      <nav>
-        <ul>
-          <a href="#projects"><li>Projets</li></a>
-          <a href="#about"><li>A propos</li></a>
-          <a href="#contact"><li>Contact</li></a>
-        </ul>
-      </nav>
-    </header>
+   <header>
+  <img src="/assets/Logo.png" alt="Logo" class="logo">
+  <div class="burger">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <nav class="desktop-nav">
+    <ul>
+      <a href="#projects"><li>Projets</li></a>
+      <a href="#about"><li>A propos</li></a>
+      <a href="#contact"><li>Contact</li></a>
+    </ul>
+  </nav>
+  <nav class="burger-menu">
+    <ul class="burger-nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+    </div>
     <main>
       <section class="home" id="home">
         <div class="home_first_block">
@@ -62,7 +74,7 @@
 
           <div class="right"></div>
         </div>
-        <div style="margin-left: 9vw">
+        <div style="margin-left: 9vw; z-index: 50;">
           <a href="#projects">
             <div class="see_more">
               <p>My work</p>
