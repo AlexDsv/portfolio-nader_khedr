@@ -6,7 +6,7 @@ $(document).ready(function () {
       0: {
         items: 1,
       },
-      550: {
+      570: {
         items: 2,
       },
       1000: {

@@ -28,6 +28,10 @@ header {
 a {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
+  position: relative;
+  margin: 0 var(--spacing, 0px);
+  transition: margin 0.25s;
 }
 
 .logo {
@@ -133,8 +137,25 @@ a {
     display: none;
   }
 
-  .projects {
+  #projects .owl-carousel .item {
+    width: 95%;
+    height: 30vh;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  ul {
+    padding: 0;
+  }
+  #projects {
     padding-left: 0;
+    width: 90%;
+    margin: auto;
+  }
+
+  main .contact {
+    height: 85vh;
+    margin-top: 15vh;
+    padding-top: 0;
   }
 
   .home .left {
@@ -151,7 +172,7 @@ a {
     background-position: center;
     background-size: cover;
     width: 100%;
-    opacity: 0.08;
+    opacity: 0.05;
     position: absolute;
     top: 20px;
     left: 0;
@@ -292,7 +313,7 @@ a li {
 
 .about p {
   font-family: "Outfit";
-  font-size: calc(1.5rem + 0.6vh);
+  font-size: calc(1rem + 1vw);
 }
 
 .about .see_more p {
@@ -326,7 +347,8 @@ a li {
 
 .contact p {
   font-family: "Outfit";
-  font-size: calc(1.5rem + 1vh);
+  font-size: calc(1rem + 1.1vw);
+  text-align: center;
 }
 
 .projects {
@@ -463,4 +485,27 @@ a {
   .arrow_div img {
     display: none;
   }
+}
+
+svg {
+  width: 76px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 7px) translateZ(0);
+  fill: none;
+  stroke: var(--stroke, var(--line));
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke-dasharray: var(--offset, 69px) 278px;
+  stroke-dashoffset: 361px;
+  transition: stroke 0.25s ease var(--stroke-delay, 0s), stroke-dasharray 0.35s;
+}
+
+svg:hover {
+  --spacing: 4px;
+  --stroke: #275efe;
+  --stroke-delay: 0.1s;
+  --offset: 180px;
 }
