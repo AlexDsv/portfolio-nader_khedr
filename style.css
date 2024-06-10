@@ -28,10 +28,6 @@ header {
 a {
   text-decoration: none;
   color: inherit;
-  display: inline-block;
-  position: relative;
-  margin: 0 var(--spacing, 0px);
-  transition: margin 0.25s;
 }
 
 .logo {
@@ -488,16 +484,16 @@ a {
 }
 
 svg {
-  width: 76px;
-  height: 40px;
+  width: 145px;
+  height: 80px;
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 30px;
   transform: translate(-50%, 7px) translateZ(0);
   fill: none;
   stroke: var(--stroke, var(--line));
   stroke-linecap: round;
-  stroke-width: 2px;
+  stroke-width: 0.5px;
   stroke-dasharray: var(--offset, 69px) 278px;
   stroke-dashoffset: 361px;
   transition: stroke 0.25s ease var(--stroke-delay, 0s), stroke-dasharray 0.35s;
@@ -505,7 +501,45 @@ svg {
 
 svg:hover {
   --spacing: 4px;
-  --stroke: #275efe;
+  --stroke: #4e4e4e;
   --stroke-delay: 0.1s;
   --offset: 180px;
+}
+
+.desktop-nav a {
+  position: relative;
+}
+
+.desktop-nav a:hover::before,
+.desktop-nav a:active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 1px solid var(--line-active); /* Couleur du cercle au survol */
+  border-radius: 50%;
+  transition: border-width 0.25s ease, width 0.25s ease, height 0.25s ease;
+}
+
+.desktop-nav a:hover::after,
+.desktop-nav a:active::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px); /* Ajustez selon votre préférence */
+  height: calc(100% + 4px); /* Ajustez selon votre préférence */
+  top: -2px; /* Ajustez selon votre préférence */
+  left: -2px; /* Ajustez selon votre préférence */
+  border: 2px solid var(--line-active); /* Couleur du cercle au survol */
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.desktop-nav a:hover::before,
+.desktop-nav a:hover::after,
+.desktop-nav a:active::before,
+.desktop-nav a:active::after {
+  z-index: -1; /* Pour placer les pseudo-éléments derrière le texte */
 }
