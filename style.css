@@ -133,6 +133,9 @@ a {
     display: none;
   }
 
+  main .about {
+    height: auto;
+  }
   #projects .owl-carousel .item {
     width: 95%;
     height: 30vh;
